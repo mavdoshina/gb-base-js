@@ -44,6 +44,15 @@
     },
   ];
 
+  var productsNew = products.filter(function(product) {
+    const arr = product.photos;
+    if ('photos' in product) {
+      return  product.photos.length > 0;
+    } else return false;
+  });
+
+  console.log(productsNew);
+
   // Здесь пишем решение, данный комментарий необходимо стереть.
 </script>
 </body>

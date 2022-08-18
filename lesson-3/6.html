@@ -25,7 +25,18 @@ xxxxx
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  for (let i = ''; i.length < 20; console.log(i += 'x')) {}
+
+  let str = '';
+  for (let i = 1; i < 21; i++) {
+    for (let j = 1; j <= i; j++){
+      str += 'x';
+    }
+    str += '\n';
+  }
+
+  console.log(str);
+  
 </script>
 </body>
 </html>

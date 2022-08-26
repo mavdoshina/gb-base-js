@@ -94,7 +94,7 @@
 
    document.querySelector('textarea')
    .addEventListener(
-    'mousemove', 
+    'mouseover', 
     () => console.log('Вы навели на textarea')
   );
 
@@ -107,6 +107,12 @@
   Необходимо использовать делегирование.
    */
 
+   document.querySelector('ul').addEventListener('click', event => {
+    if(event.target.tagName === 'BUTTON' ) {
+      console.log(event.target.textContent);
+    }
+    return;
+   });
 
   /*
   6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только
@@ -114,10 +120,23 @@
   Ответ необходимо написать здесь же, под этим комментарием, своими словами.
   */
 
+  /*
+  в задании 3 событие стоит на document, а в 5 задании стоит на ul.
+  Когда на элементе происходит событие, обработчики сначала срабатывают на нём,
+  потом на его родителе, затем выше и так далее, вверх по цепочке предков. 
+  При клике на кнопку сначала событие срабатывает на ul, а потому уже на document. Это называется всплытием.
+   */
 
   /*
   7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
    */
+
+   document
+   .querySelectorAll('li:nth-child(2n)')
+   .forEach(item => {
+      item.style.background = 'blue';
+   });
+   
 
 </script>
 </body>

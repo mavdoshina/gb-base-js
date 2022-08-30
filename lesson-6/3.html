@@ -38,11 +38,37 @@
   golden, также такой класс должен ставиться всем звездам до нее слева.
   */
 
+  document 
+    .querySelector('.stars_container')
+    .addEventListener('mouseover', event => {
+      if(event.target.classList.contains('stars_container')) return;
+
+      let starsEl = event.target;
+      while(starsEl) {
+        starsEl.classList.add('golden');
+        starsEl = starsEl.previousElementSibling;
+      };
+    
+    });
+
 
   /*
   2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
   задания должны быть удалены.
    */
+
+  document 
+    .querySelector('.stars_container')
+    .addEventListener('mouseout', event => {
+      if(event.target.classList.contains('stars_container')) return;
+
+      let starsEl = event.target;
+      while(starsEl) {
+        starsEl.classList.remove('golden');
+        starsEl = starsEl.previousElementSibling;
+      };
+    
+    });
 
 
   /*
@@ -51,6 +77,13 @@
   Можем ли мы это исправить? Если да, то предложите решение.
   */
 
+  /* Причина маргания звезд расстояния между звездами. Можно добавить классу stars_container display: flex. Еще можно удалить лишние пробелы через js*/
+
+  document.querySelector('.stars_container').childNodes.forEach(item => {
+    if (item.nodeName === '#text') {
+      item.remove();
+    }
+  });
 
 </script>
 </body>

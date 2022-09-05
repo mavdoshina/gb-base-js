@@ -21,7 +21,7 @@
   "use strict";
 
   // Функция конструктор es5 стиля. Принимает название продукта и цену
-  function ProductES5 (name, price) {
+  function ProductES5(name, price) {
     this.name = name;
     this.price = price;
   }
@@ -29,10 +29,10 @@
   // Метод, который будет уменьшать цену на 25%
   ProductES5.prototype.make25Discount = function () {
     this.price *= 0.75;
-  }
+  };
 
   // Создаем экземпляр prodES5 объекта ProductES5
-  const prodES5 = new ProductES5 ('Ноутбук', 100000);
+  const prodES5 = new ProductES5('Ноутбук', 100000);
 
   console.log(prodES5);
   console.log(`${prodES5.name} - ${prodES5.price}`);
@@ -42,21 +42,17 @@
 
   // Класс es6 стиля. 
   class ProductES6 {
-
-    // Конструктор
     constructor(name, price) {
       this.name = name;
       this.price = price;
     }
 
-    // Метод, который будет уменьшать цену на 25%
     make25Discount() {
       this.price *= 0.75;
     }
   }
 
-  // Создаем экземпляр prodES6 объекта ProductES5
-  const prodES6 = new ProductES6 ('Ноутбук', 200000);
+  const prodES6 = new ProductES6('Ноутбук', 200000);
 
   console.log(prodES6);
   console.log(`${prodES6.name} - ${prodES6.price}`);

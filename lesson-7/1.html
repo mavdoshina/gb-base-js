@@ -64,7 +64,7 @@
   document
     .querySelector('.nav-tabs')
     .addEventListener('click', event => {
-      if(!event.target.classList.contains('nav-link')){
+      if (!event.target.classList.contains('nav-link')) {
         return;
       }
 
@@ -81,10 +81,14 @@
   перетаскивании ползунка.
    */
 
-   const inputDiv = document.getElementById('inputDiv');
-   document.querySelector('input').addEventListener('input', event => {
+  const inputDiv = document.getElementById('inputDiv');
+  const inputRange = document.querySelector('input');
+  inputRange.value = Number.parseInt(getComputedStyle(inputDiv).fontSize)
+  .toString();
+
+  document.querySelector('input').addEventListener('input', event => {
     inputDiv.style.fontSize = `${event.target.value}px`;
-   });
+  });
 
 </script>
 </body>

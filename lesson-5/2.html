@@ -35,8 +35,8 @@
    */
 
   document
-  .querySelectorAll('.dropdown-item')
-  .forEach(item => item.classList.add('super-dropdown'));
+    .querySelectorAll('.dropdown-item')
+    .forEach(item => item.classList.add('super-dropdown'));
 
 
   /*
@@ -62,8 +62,8 @@
    */
 
    document
-   .querySelector('div.dropdown')
-   .insertAdjacentHTML('afterend', '<a href="#">link</a>');
+    .querySelector('div.dropdown')
+    .insertAdjacentHTML('afterend', '<a href="#">link</a>');
 
 
   /*
@@ -71,8 +71,7 @@
    */
 
    document
-   .getElementById('dropdownMenuButton')
-   .setAttribute('id','superDropdown');
+    .getElementById('dropdownMenuButton').id = 'superDropdown';
 
 
   /*
@@ -81,8 +80,7 @@
    */
 
    document
-   .querySelector('[aria-labelledby = "dropdownMenuButton"]')
-   .setAttribute('data-dd','3');
+    .querySelector('[aria-labelledby = "dropdownMenuButton"]').dataset.dd = '3';
 
   /*
   7. Удалите атрибут type у элемента с классом "dropdown-toggle".
@@ -100,9 +98,9 @@
     .querySelector('.btn.dropdown-toggle')
     .attributes;
 
-  for(const attribute of attributesList ){
+  for (const attribute of attributesList) {
     console.log(`Атрибут "${attribute.name}" содержит значение "${attribute.value}"`);
-  };
+  }
 
 </script>
 </body>

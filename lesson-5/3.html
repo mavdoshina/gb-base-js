@@ -79,9 +79,8 @@
   */
 
   document.addEventListener('click', event => {
-    const hasClass = event.target.classList.contains('super_element');
     let hasClassStr = 'отсутствует';
-    if(hasClass) {
+    if(event.target.classList.contains('super_element')) {
       hasClassStr = 'присутствует';
     }
     console.log(`Класс "super_element" ${hasClassStr} в элементе ${event.target.tagName.toLowerCase()}`);
@@ -93,10 +92,10 @@
    */
 
    document.querySelector('textarea')
-   .addEventListener(
-    'mouseover', 
-    () => console.log('Вы навели на textarea')
-  );
+    .addEventListener(
+      'mouseover', 
+      () => console.log('Вы навели на textarea')
+    );
 
 
   /*
@@ -107,12 +106,12 @@
   Необходимо использовать делегирование.
    */
 
-   document.querySelector('ul').addEventListener('click', event => {
-    if(event.target.tagName === 'BUTTON' ) {
+  document.querySelector('ul').addEventListener('click', event => {
+    if (event.target.tagName === 'BUTTON') {
       console.log(event.target.textContent);
     }
     return;
-   });
+  });
 
   /*
   6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только
@@ -131,11 +130,11 @@
   7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
    */
 
-   document
-   .querySelectorAll('li:nth-child(2n)')
-   .forEach(item => {
+  document
+    .querySelectorAll('li:nth-child(2n)')
+    .forEach(item => {
       item.style.background = 'blue';
-   });
+    });
    
 
 </script>

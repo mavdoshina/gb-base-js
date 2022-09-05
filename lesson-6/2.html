@@ -106,7 +106,7 @@
 
   formEl.addEventListener('submit', event => {
     formElements.forEach(item => {
-      if(item.value === '') {
+      if (item.value === '') {
         item.classList.add('error');
         event.preventDefault();
       }

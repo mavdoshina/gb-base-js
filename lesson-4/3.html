@@ -39,16 +39,15 @@
    * разрядами числа или пустой объект в случае ошибки
    */
   function getDigitsOfNumber(number) {
-    if(Number.isInteger(number) && number >= 0 && number < 1000){
+    if (Number.isInteger(number) && number >= 0 && number < 1000) {
       return {
         units: number % 10,
         dozens:  Math.trunc(number / 10) % 10,
         hundreds:  Math.trunc(number / 100) % 10,
       };
-    } else {
-      console.error('Error. number must be a positive integer and in the range [0, 999]');
-      return {}
-    }
+    } 
+    console.error('Error. number must be a positive integer and in the range [0, 999]');
+    return {};
   }
 
   console.log(getDigitsOfNumber(132));

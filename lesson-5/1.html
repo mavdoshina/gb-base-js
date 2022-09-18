@@ -45,10 +45,10 @@
    */
 
    document
-   .querySelectorAll('.card-link')
-   .forEach(item => {
-    item.innerHTML = 'ссылка';
-   })
+    .querySelectorAll('.card-link')
+    .forEach(item => {
+      item.innerHTML = 'ссылка';
+    });
 
   /*
   3. Найти все элементы на странице с классом "card-link", которые лежат в
@@ -83,7 +83,7 @@
   тег в начало элемента, который имеет класс "card".
    */
 
-  let pEl = document.createElement('p');
+  const pEl = document.createElement('p');
   pEl.innerHTML = 'Привет';
   document.querySelector('.card').prepend(pEl);
 

@@ -38,7 +38,7 @@ Infinity делать не нужно, однако, в случае если б
    * @param {number} b  - второе число
    * @returns {number} - число, сумма двух чисел
    */
-  function Summ (a, b) {
+  function summ(a, b) {
     return a + b;
   }
   
@@ -48,7 +48,7 @@ Infinity делать не нужно, однако, в случае если б
    * @param {number} b  - второе число
    * @returns {number} - число, разность двух чисел
    */
-  function Difference (a, b) {
+  function difference(a, b) {
     if(a > b) {
       return a - b;
     } 
@@ -61,7 +61,7 @@ Infinity делать не нужно, однако, в случае если б
    * @param {number} b  - второе число
    * @returns {number} - число, произведение двух чисел
    */
-  function Multiplication (a, b) {
+  function multiplication(a, b) {
     return a * b;
   }
   
@@ -71,7 +71,7 @@ Infinity делать не нужно, однако, в случае если б
    * @param {number} b  - второе число
    * @returns {number} - число, произведение двух чисел
    */
-  function Division (a, b) {
+  function division(a, b) {
     return a / b;
   }
 
@@ -86,10 +86,10 @@ Infinity делать не нужно, однако, в случае если б
    */
   function mathOperation(arg1, arg2, operation) {
     switch (operation) {
-      case "+" : return Summ(arg1, arg2);
-      case "-" : return Difference(arg1, arg2);
-      case "*" : return Multiplication(arg1, arg2);
-      case "/" : return Division(arg1, arg2);
+      case "+" : return summ(arg1, arg2);
+      case "-" : return difference(arg1, arg2);
+      case "*" : return multiplication(arg1, arg2);
+      case "/" : return division(arg1, arg2);
       default: return NaN;
     } 
   }
